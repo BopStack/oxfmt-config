@@ -1,0 +1,20 @@
+{
+  "name": "@bopstack/oxfmt",
+  "version": "0.1.0",
+  "private": false,
+  "description": "Shared oxfmt (formatter) configuration for Bopstack projects",
+  "license": "MIT",
+  "files": [
+    "src/",
+    "oxfmtrc.json"
+  ],
+  "type": "module",
+  "scripts": {
+    "test": "vitest run"
+  },
+  "devDependencies": {
+    "arktype": "^2.2.0",
+    "typescript": "^5.9.3",
+    "vitest": "^3.2.4"
+  }
+}

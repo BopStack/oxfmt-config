@@ -1,0 +1,15 @@
+{
+  "rules": {
+    "typescript": {
+      "no-explicit-any": "warn"
+    },
+    "unicorn": {
+      "filename-case": ["error", { "case": "snakeCase" }]
+    },
+    "eslint": {
+      "curly": "error",
+      "no-console": "warn",
+      "max-params": ["warn", { "max": 3 }]
+    }
+  }
+}
