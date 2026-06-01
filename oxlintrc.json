@@ -1,9 +1,9 @@
 {
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["typescript", "unicorn"],
-  "rules": {
-    "typescript/no-explicit-any": "off",
-    "unicorn/filename-case": ["error", { "case": "snakeCase" }],
-    "no-console": "warn"
-  }
+	"$schema": "./node_modules/oxlint/configuration_schema.json",
+	"plugins": ["typescript", "unicorn"],
+	"rules": {
+		"typescript/no-explicit-any": "off",
+		"unicorn/filename-case": ["error", { "case": "snakeCase" }],
+		"no-console": "warn"
+	}
 }

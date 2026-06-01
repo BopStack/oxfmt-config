@@ -2,4 +2,4 @@
 
 ## 0.1.0
 
-- Initial release: `oxfmtrc.json`
+- Initial release: shared `.oxfmtrc.json` package as `@bopstck/oxfmt-config`.

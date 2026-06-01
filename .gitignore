@@ -1,5 +1,11 @@
 node_modules/
 tmp/
 dist/
+coverage/
 *.log
+*.tgz
 .DS_Store
+.env
+.env.*
+!.env.example
+HANDOFF.md
