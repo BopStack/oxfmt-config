@@ -1,5 +1,5 @@
-node_modules
-tmp
-dist
+node_modules/
+tmp/
+dist/
 *.log
 .DS_Store

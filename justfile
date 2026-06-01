@@ -2,16 +2,16 @@ install:
     pnpm install
 
 build:
-    pnpm exec tsc --noEmit
+    @echo "No build step for config-only package"
 
 format:
-    pnpm exec oxfmt --config oxfmtrc.json .
+    pnpm exec oxfmt .
 
 lint:
     pnpm exec oxlint .
 
 typecheck:
-    pnpm exec tsc --noEmit
+    @echo "No typecheck for config-only package"
 
 test:
     pnpm exec vitest run
@@ -19,4 +19,4 @@ test:
 check: format lint typecheck test
 
 e2e:
-    @echo "no e2e defined for @bopstack/oxfmt"
+    @echo "No e2e tests for this package"

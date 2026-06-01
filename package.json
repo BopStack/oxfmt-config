@@ -1,26 +1,21 @@
 {
   "name": "@bopstack/oxfmt",
   "version": "0.1.0",
-  "private": false,
-  "description": "Shared oxfmt (formatter) configuration for Bopstack projects",
+  "description": "Shared oxlint formatter configuration for @bopstack packages",
   "license": "MIT",
   "files": [
-    "src/",
-    "oxfmtrc.json"
+    "oxfmtrc.json",
+    "src/"
   ],
   "type": "module",
+  "exports": {
+    "./oxfmtrc.json": "./oxfmtrc.json"
+  },
   "scripts": {
-    "typecheck": "tsc --noEmit",
-    "test": "vitest run",
-    "format": "oxfmt .",
-    "lint": "oxlint .",
-    "check": "oxfmt . && oxlint . && tsc --noEmit && vitest run"
+    "test": "vitest run"
   },
   "devDependencies": {
-    "arktype": "^2.2.0",
-    "oxfmt": "^0.52.0",
-    "oxlint": "^1.67.0",
-    "typescript": "^5.9.3",
-    "vitest": "^3.2.4"
+    "typescript": "^5.7.0",
+    "vitest": "^3.0.0"
   }
 }

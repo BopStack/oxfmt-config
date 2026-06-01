@@ -1,24 +1,21 @@
 # @bopstack/oxfmt
 
-Shared [oxfmt](https://oxc.rs/docs/formatter.html) configuration for Bopstack projects.
+Shared oxlint formatter configuration for `@bopstack/*` packages.
+
+## Install
+
+```bash
+pnpm add -D @bopstack/oxfmt
+```
 
 ## Usage
 
-```json
-{
-  "extends": "@bopstack/oxfmt/oxfmtrc.json"
-}
-```
+Copy `oxfmtrc.json` to your project root, or extend it via the `@bopstack/config` CLI.
 
-Or copy the config directly:
+## Files
 
-```bash
-pnpm exec oxfmt --config oxfmtrc.json .
-```
+- **`oxfmtrc.json`** — oxfmt configuration (useTabs, singleQuote, semi:false, printWidth:100, trailingComma:none)
 
-## Local development
+## License
 
-```bash
-pnpm install
-pnpm test
-```
+MIT
