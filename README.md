@@ -1,11 +1,11 @@
-# @bopstck/oxfmt-config
+# @bopstack/oxfmt-config
 
 Shared [`oxfmt`](https://oxc.rs/docs/guide/usage/formatter.html) configuration for Bopstack packages.
 
 ## Install
 
 ```bash
-pnpm add -D @bopstck/oxfmt-config
+pnpm add -D @bopstack/oxfmt-config
 ```
 
 ## Usage
@@ -13,7 +13,7 @@ pnpm add -D @bopstck/oxfmt-config
 Copy the published config into your project root:
 
 ```bash
-cp node_modules/@bopstck/oxfmt-config/.oxfmtrc.json ./.oxfmtrc.json
+cp node_modules/@bopstack/oxfmt-config/.oxfmtrc.json ./.oxfmtrc.json
 ```
 
 Then run `oxfmt` with your normal project tooling.

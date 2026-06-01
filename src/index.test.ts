@@ -27,7 +27,7 @@ describe('package metadata', () => {
 			with: { type: 'json' }
 		})
 
-		expect(pkg.default.name).toBe('@bopstck/oxfmt-config')
+		expect(pkg.default.name).toBe('@bopstack/oxfmt-config')
 		expect(pkg.default.license).toBe('MIT')
 		expect(pkg.default.repository.url).toBe('git+https://github.com/bopstack/oxfmt-config.git')
 		expect(pkg.default.packageManager).toBe('pnpm@11.3.0')
