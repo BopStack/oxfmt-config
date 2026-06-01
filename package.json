@@ -10,10 +10,16 @@
   ],
   "type": "module",
   "scripts": {
-    "test": "vitest run"
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "format": "oxfmt .",
+    "lint": "oxlint .",
+    "check": "oxfmt . && oxlint . && tsc --noEmit && vitest run"
   },
   "devDependencies": {
     "arktype": "^2.2.0",
+    "oxfmt": "^0.52.0",
+    "oxlint": "^1.67.0",
     "typescript": "^5.9.3",
     "vitest": "^3.2.4"
   }
