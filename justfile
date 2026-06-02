@@ -2,7 +2,7 @@ install:
     pnpm install
 
 build:
-    @echo "No build step for config-only package"
+    pnpm exec tsc -p tsconfig.build.json
 
 format:
     pnpm exec oxfmt --config oxfmtrc.json .

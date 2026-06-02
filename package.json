@@ -1,41 +1,45 @@
 {
-   "name": "@bopstack/oxfmt-config",
-   "version": "0.2.0",
-   "description": "Shared oxfmt configuration for Bopstack packages.",
-   "keywords": [
-      "bopstack",
-      "config",
-      "formatter",
-      "oxfmt"
-   ],
-   "homepage": "https://github.com/bopstack/oxfmt-config#readme",
-   "bugs": {
-      "url": "https://github.com/bopstack/oxfmt-config/issues"
-   },
-   "license": "MIT",
-   "repository": {
-      "type": "git",
-      "url": "git+https://github.com/bopstack/oxfmt-config.git"
-   },
-   "files": [
-      "oxfmtrc.json",
-      "CHANGELOG.md"
-   ],
-   "type": "module",
-   "sideEffects": false,
-   "exports": {
-      ".": "./oxfmtrc.json",
-      "./oxfmtrc.json": "./oxfmtrc.json",
-      "./package.json": "./package.json"
-   },
-   "main": "./oxfmtrc.json",
-   "publishConfig": {
-      "access": "public"
-   },
-   "devDependencies": {
-      "typescript": "^5.7.0",
-      "vitest": "^3.0.0"
-   },
-   "packageManager": "pnpm@11.3.0"
+	"name": "@bopstack/oxfmt-config",
+	"version": "0.2.0",
+	"description": "Shared oxfmt configuration for Bopstack packages.",
+	"keywords": [
+		"bopstack",
+		"config",
+		"formatter",
+		"oxfmt"
+	],
+	"homepage": "https://github.com/bopstack/oxfmt-config#readme",
+	"bugs": {
+		"url": "https://github.com/bopstack/oxfmt-config/issues"
+	},
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/bopstack/oxfmt-config.git"
+	},
+	"files": [
+		"dist/",
+		"oxfmtrc.json",
+		"CHANGELOG.md"
+	],
+	"type": "module",
+	"sideEffects": false,
+	"main": "./dist/oxfmt.js",
+	"types": "./dist/oxfmt.d.ts",
+	"exports": {
+		".": "./dist/oxfmt.js",
+		"./oxfmtrc.json": "./oxfmtrc.json",
+		"./package.json": "./package.json"
+	},
+	"publishConfig": {
+		"access": "public"
+	},
+	"scripts": {
+		"build": "pnpm exec tsc -p tsconfig.build.json"
+	},
+	"devDependencies": {
+		"typescript": "^5.7.0",
+		"vitest": "^3.0.0"
+	},
+	"packageManager": "pnpm@11.3.0"
 }
-

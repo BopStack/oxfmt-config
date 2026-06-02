@@ -1,23 +1,25 @@
 import { describe, expect, it } from 'vitest'
 
-const expected_package_files = ['oxfmtrc.json', 'CHANGELOG.md']
+import json_config from '../oxfmtrc.json' with { type: 'json' }
+import oxfmt_config from './oxfmt.ts'
 
-describe('oxfmtrc.json', () => {
-	it('contains all expected keys', async () => {
-		const config = await import('../oxfmtrc.json', {
-			with: { type: 'json' }
-		})
-		const cfg = config.default
+const expected_package_files = ['dist/', 'oxfmtrc.json', 'CHANGELOG.md']
 
-		expect(cfg.useTabs).toBe(true)
-		expect(cfg.singleQuote).toBe(true)
-		expect(cfg.trailingComma).toBe('none')
-		expect(cfg.semi).toBe(false)
-		expect(cfg.printWidth).toBe(100)
-		expect(cfg.sortImports).toBe(true)
-		expect(cfg.sortTailwindcss).toBe(true)
-		expect(cfg.sortPackageJson).toBe(true)
-		expect(cfg.insertFinalNewline).toBe(false)
+describe('oxfmt_config (TS entry)', () => {
+	it('exports all expected keys with correct values', () => {
+		expect(oxfmt_config.useTabs).toBe(true)
+		expect(oxfmt_config.singleQuote).toBe(true)
+		expect(oxfmt_config.trailingComma).toBe('none')
+		expect(oxfmt_config.semi).toBe(false)
+		expect(oxfmt_config.printWidth).toBe(100)
+		expect(oxfmt_config.sortImports).toBe(true)
+		expect(oxfmt_config.sortTailwindcss).toBe(true)
+		expect(oxfmt_config.sortPackageJson).toBe(true)
+		expect(oxfmt_config.insertFinalNewline).toBe(false)
+	})
+
+	it('stays in sync with oxfmtrc.json', () => {
+		expect(oxfmt_config).toEqual(json_config)
 	})
 })
 
@@ -33,6 +35,8 @@ describe('package metadata', () => {
 		expect(pkg.default.packageManager).toBe('pnpm@11.3.0')
 		expect(pkg.default.publishConfig.access).toBe('public')
 		expect(pkg.default.files).toEqual(expected_package_files)
-		expect('scripts' in pkg.default).toBe(false)
+		expect(pkg.default.exports['.']).toBe('./dist/oxfmt.js')
+		expect(pkg.default.main).toBe('./dist/oxfmt.js')
+		expect(pkg.default.scripts.build).toBe('pnpm exec tsc -p tsconfig.build.json')
 	})
 })
