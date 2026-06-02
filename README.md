@@ -13,7 +13,7 @@ pnpm add -D @bopstack/oxfmt-config
 Copy the published config into your project root:
 
 ```bash
-cp node_modules/@bopstack/oxfmt-config/.oxfmtrc.json ./.oxfmtrc.json
+cp node_modules/@bopstack/oxfmt-config/oxfmtrc.json ./oxfmtrc.json
 ```
 
 Then run `oxfmt` with your normal project tooling.
@@ -30,7 +30,7 @@ Then run `oxfmt` with your normal project tooling.
 
 ## Package contents
 
-- `.oxfmtrc.json` — shared formatter configuration
+- `oxfmtrc.json` — shared formatter configuration
 - `LICENSE` — MIT license
 - `README.md` — package usage
 - `CHANGELOG.md` — release notes

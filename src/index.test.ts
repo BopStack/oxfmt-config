@@ -1,10 +1,10 @@
 import { describe, expect, it } from 'vitest'
 
-const expected_package_files = ['.oxfmtrc.json', 'CHANGELOG.md']
+const expected_package_files = ['oxfmtrc.json', 'CHANGELOG.md']
 
-describe('.oxfmtrc.json', () => {
+describe('oxfmtrc.json', () => {
 	it('contains all expected keys', async () => {
-		const config = await import('../.oxfmtrc.json', {
+		const config = await import('../oxfmtrc.json', {
 			with: { type: 'json' }
 		})
 		const cfg = config.default

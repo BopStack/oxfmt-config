@@ -1,6 +1,6 @@
 {
    "name": "@bopstack/oxfmt-config",
-   "version": "0.1.0",
+   "version": "0.2.0",
    "description": "Shared oxfmt configuration for Bopstack packages.",
    "keywords": [
       "bopstack",
@@ -18,15 +18,17 @@
       "url": "git+https://github.com/bopstack/oxfmt-config.git"
    },
    "files": [
-      ".oxfmtrc.json",
+      "oxfmtrc.json",
       "CHANGELOG.md"
    ],
    "type": "module",
    "sideEffects": false,
    "exports": {
-      "./.oxfmtrc.json": "./.oxfmtrc.json",
+      ".": "./oxfmtrc.json",
+      "./oxfmtrc.json": "./oxfmtrc.json",
       "./package.json": "./package.json"
    },
+   "main": "./oxfmtrc.json",
    "publishConfig": {
       "access": "public"
    },

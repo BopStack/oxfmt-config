@@ -5,7 +5,7 @@ build:
     @echo "No build step for config-only package"
 
 format:
-    pnpm exec oxfmt --config .oxfmtrc.json .
+    pnpm exec oxfmt --config oxfmtrc.json .
 
 lint:
     pnpm exec oxlint .
